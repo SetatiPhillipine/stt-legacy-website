@@ -2,6 +2,8 @@ import { useRef } from 'react'
 import { motion, useScroll, useTransform, useReducedMotion } from 'framer-motion'
 import { HIGHLIGHTS } from '../data/content.js'
 import Icon from './Icon.jsx'
+import about1 from '../assets/about1.jpeg'
+import about2 from '../assets/about2.jpeg'
 
 const ease = [0.22, 1, 0.36, 1]
 
@@ -38,12 +40,9 @@ export default function About() {
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 1.0, ease }}
           >
-            <motion.div
-              className="about__shift"
-              style={{ y }}
-            >
+            <motion.div className="about__shift" style={{ y }}>
               <img
-                src={`${import.meta.env.BASE_URL}images/about1.jpeg`}
+                src={about1}
                 alt="STT Legacy construction work"
                 className="about__image"
               />
@@ -57,12 +56,9 @@ export default function About() {
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 1.0, ease, delay: 0.15 }}
           >
-            <motion.div
-              className="about__shift"
-              style={{ y }}
-            >
+            <motion.div className="about__shift" style={{ y }}>
               <img
-                src={`${import.meta.env.BASE_URL}images/about2.jpeg`}
+                src={about2}
                 alt="STT Legacy carpentry and construction work"
                 className="about__image"
               />
@@ -76,11 +72,7 @@ export default function About() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-80px' }}
-          transition={{
-            duration: 0.8,
-            ease,
-            delay: 0.15,
-          }}
+          transition={{ duration: 0.8, ease, delay: 0.15 }}
         >
           <h2 id="about-title" className="h2">
             BUILDING A LEGACY THAT LASTS
@@ -97,11 +89,7 @@ export default function About() {
           <ul className="highlights">
             {HIGHLIGHTS.map((h) => (
               <li key={h.label} className="highlight">
-                <Icon
-                  name={h.icon}
-                  size={22}
-                  strokeWidth={1.7}
-                />
+                <Icon name={h.icon} size={22} strokeWidth={1.7} />
                 <span>{h.label}</span>
               </li>
             ))}
