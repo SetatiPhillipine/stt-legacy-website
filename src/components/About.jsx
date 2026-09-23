@@ -14,11 +14,10 @@ export default function About() {
     offset: ['start end', 'end start'],
   })
 
-  // Subtle parallax movement
   const y = useTransform(
     scrollYProgress,
     [0, 1],
-    reduce ? ['0%', '0%'] : ['-5%', '5%']
+    reduce ? ['0%', '0%'] : ['-3%', '3%']
   )
 
   return (
@@ -30,27 +29,48 @@ export default function About() {
     >
       <div className="container about__grid">
 
-        {/* STT LEGACY LOGO */}
-        <motion.div
-          className="about__media about__logo-box"
-          initial={{ clipPath: 'inset(0 100% 0 0)' }}
-          whileInView={{ clipPath: 'inset(0 0% 0 0)' }}
-          viewport={{ once: true, margin: '-80px' }}
-          transition={{ duration: 1.1, ease }}
-        >
-          <motion.div
-            className="about__shift about__logo-wrap"
-            style={{ y }}
-          >
-            <img
-              src="/images/STT LOGO.jpeg"
-              alt="STT Legacy Carpentry and Construction logo"
-              className="about__logo"
-            />
-          </motion.div>
-        </motion.div>
+        <div className="about__media-group">
 
-        {/* ABOUT INFORMATION */}
+          <motion.div
+            className="about__media"
+            initial={{ clipPath: 'inset(0 100% 0 0)' }}
+            whileInView={{ clipPath: 'inset(0 0% 0 0)' }}
+            viewport={{ once: true, margin: '-80px' }}
+            transition={{ duration: 1.0, ease }}
+          >
+            <motion.div
+              className="about__shift"
+              style={{ y }}
+            >
+              <img
+                src={`${import.meta.env.BASE_URL}images/about1.jpeg`}
+                alt="STT Legacy construction work"
+                className="about__image"
+              />
+            </motion.div>
+          </motion.div>
+
+          <motion.div
+            className="about__media"
+            initial={{ clipPath: 'inset(0 100% 0 0)' }}
+            whileInView={{ clipPath: 'inset(0 0% 0 0)' }}
+            viewport={{ once: true, margin: '-80px' }}
+            transition={{ duration: 1.0, ease, delay: 0.15 }}
+          >
+            <motion.div
+              className="about__shift"
+              style={{ y }}
+            >
+              <img
+                src={`${import.meta.env.BASE_URL}images/about2.jpeg`}
+                alt="STT Legacy carpentry and construction work"
+                className="about__image"
+              />
+            </motion.div>
+          </motion.div>
+
+        </div>
+
         <motion.div
           className="about__content"
           initial={{ opacity: 0, y: 30 }}

@@ -805,11 +805,17 @@ address {
   gap: clamp(3rem, 7vw, 7rem);
 }
 
-/* STT LEGACY LOGO BOX */
+/* TWO ABOUT IMAGE FRAMES */
+.about__media-group {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+/* INDIVIDUAL IMAGE FRAME */
 .about__media {
   position: relative;
-
-  min-height: 560px;
+  min-height: 430px;
 
   display: flex;
   align-items: center;
@@ -826,28 +832,36 @@ address {
     #101010;
 
   border-radius: var(--radius-lg);
-}
 
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.30),
+    0 0 30px rgba(0, 230, 118, 0.025);
+
+  transition:
+    transform 0.4s var(--ease),
+    border-color 0.3s ease,
+    box-shadow 0.4s ease;
+}
 /* Green inner border */
 .about__media::before {
   content: "";
 
   position: absolute;
-  z-index: 2;
+  z-index: 3;
 
-  inset: 12px;
+  inset: 10px;
 
   border: 1px solid rgba(0, 230, 118, 0.30);
 
   pointer-events: none;
 }
 
-/* Subtle technical grid behind the logo */
+/* Technical grid overlay */
 .about__media::after {
   content: "";
 
   position: absolute;
-  z-index: 0;
+  z-index: 2;
 
   inset: 0;
 
@@ -866,12 +880,22 @@ address {
 
   background-size: 45px 45px;
 
-  opacity: 0.45;
+  opacity: 0.35;
 
   pointer-events: none;
 }
 
-.about__parallax {
+/* Hover effect */
+.about__media:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.40),
+    0 0 35px rgba(0, 230, 118, 0.08);
+}
+
+/* IMAGE WRAPPER */
+.about__shift {
   position: relative;
   z-index: 1;
 
@@ -885,29 +909,28 @@ address {
   overflow: hidden;
 }
 
-.about__shift {
-  position: relative;
-
+/* ABOUT IMAGES */
+.about__image {
   width: 100%;
   height: 100%;
+  min-height: 430px;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  object-fit: cover;
+  object-position: center;
+
+  transform: scale(1.03);
+
+  transition:
+    transform 0.8s var(--ease),
+    filter 0.4s ease;
 }
 
-/* Full STT Legacy logo */
-.about__logo {
-  width: min(85%, 450px);
-  height: auto;
-
-  object-fit: contain;
-
-  filter:
-    drop-shadow(0 0 20px rgba(0, 230, 118, 0.10))
-    drop-shadow(0 15px 30px rgba(0, 0, 0, 0.35));
+/* Image zoom on hover */
+.about__media:hover .about__image {
+  transform: scale(1.08);
 }
 
+/* ABOUT CONTENT */
 .about__content {
   max-width: 620px;
 }
@@ -921,6 +944,7 @@ address {
   line-height: 1.9;
 }
 
+/* HIGHLIGHTS */
 .highlights {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -933,9 +957,11 @@ address {
 .highlight {
   display: flex;
   align-items: center;
+
   gap: 0.7rem;
 
   min-height: 58px;
+
   padding: 0.85rem;
 
   background: rgba(255, 255, 255, 0.035);
@@ -961,7 +987,9 @@ address {
 
 .highlight:hover {
   transform: translateY(-2px);
+
   background: var(--green-soft);
+
   border-color: var(--border-green);
 }
 
