@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { MessageCircle, Mail, MapPin, Phone } from 'lucide-react'
+import { MessageCircle, Mail, MapPin, Phone, Instagram, Facebook, Music } from 'lucide-react'
 import { COMPANY } from '../data/content.js'
 import QuoteForm from './QuoteForm.jsx'
 
@@ -30,6 +30,24 @@ export default function Contact() {
             <li><Mail size={18} aria-hidden="true" /><a href={`mailto:${COMPANY.email}`}>{COMPANY.email}</a></li>
             <li><Phone size={18} aria-hidden="true" /><a href={COMPANY.whatsappUrl} target="_blank" rel="noopener noreferrer">{COMPANY.phoneDisplay}</a></li>
             <li><MapPin size={18} aria-hidden="true" /><span>{COMPANY.location}, serving all of Gauteng</span></li>
+            <li>
+              <Instagram size={18} aria-hidden="true" />
+              <a href={COMPANY.socials.instagram.url} target="_blank" rel="noopener noreferrer">
+                {COMPANY.socials.instagram.handle}
+              </a>
+            </li>
+            <li>
+              <Facebook size={18} aria-hidden="true" />
+              <a href={COMPANY.socials.facebook.url} target="_blank" rel="noopener noreferrer">
+                {COMPANY.socials.facebook.handle}
+              </a>
+            </li>
+            <li>
+              <Music size={18} aria-hidden="true" />
+              <a href={COMPANY.socials.tiktok.url} target="_blank" rel="noopener noreferrer">
+                {COMPANY.socials.tiktok.handle}
+              </a>
+            </li>
           </ul>
         </motion.div>
 

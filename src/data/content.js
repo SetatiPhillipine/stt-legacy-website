@@ -16,6 +16,21 @@ export const COMPANY = {
   whatsappNumber: '27670478198',
   whatsappUrl: 'https://wa.me/27670478198',
   founded: 2026,
+
+  socials: {
+    instagram: {
+      url: 'https://www.instagram.com/sttlegacycarpentry/',
+      handle: '@sttlegacycarpentry',
+    },
+    facebook: {
+      url: 'https://www.facebook.com/people/STT-Legacy-Carpentry-Construction-Pty-Ltd/',
+      handle: 'STT Legacy Carpentry & Construction',
+    },
+    tiktok: {
+      url: 'https://www.tiktok.com/@sttlegacy1',
+      handle: '@sttlegacy1',
+    },
+  },
 }
 
 
