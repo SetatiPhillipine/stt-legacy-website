@@ -23,7 +23,7 @@ export const COMPANY = {
       handle: '@sttlegacycarpentry',
     },
     facebook: {
-      url: 'https://www.facebook.com/people/STT-Legacy-Carpentry-Construction-Pty-Ltd/',
+      url: 'https://www.facebook.com/people/STT-Legacy-Carpentry-Construction-Pty-Ltd-/61593112455391/',
       handle: 'STT Legacy Carpentry & Construction',
     },
     tiktok: {
