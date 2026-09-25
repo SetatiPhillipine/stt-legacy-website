@@ -23,8 +23,8 @@ export const COMPANY = {
 // Place these files inside /public/images.
 
 export const LOGO = {
-  mark: '/images/logo-mark.png',
-  full: '/images/logo-full.png',
+  mark: 'images/logo-mark.png',
+  full: 'images/logo-full.png',
 }
 
 
@@ -41,37 +41,37 @@ export const PHOTOS = {
 
   // Main Home page background
   hero: {
-    src: '/images/hero-background.jpg',
+    src: 'images/hero-background.jpg',
     alt: 'Construction workers wearing safety equipment working on a building site',
   },
 
   // Building service
   building: {
-    src: '/images/building.jpg',
+    src: 'images/building.jpg',
     alt: 'Construction workers building a residential brick structure',
   },
 
   // Roofing service
   roofing: {
-    src: '/images/roofing.jpg',
+    src: 'images/roofing.jpg',
     alt: 'Roofing workers installing and working on a residential roof',
   },
 
   // Carpentry service
   carpentry: {
-    src: '/images/carpentry.jpg',
+    src: 'images/carpentry.jpg',
     alt: 'Carpenter measuring and working with timber on a construction project',
   },
 
   // Renovations service
   renovations: {
-    src: '/images/renovations.jpg',
+    src: 'images/renovations.jpg',
     alt: 'Workers carrying out renovation work inside a residential property',
   },
 
   // About section
   about: {
-    src: '/images/about-team.jpg',
+    src: 'images/about-team.jpg',
     alt: 'Construction workers reviewing building plans on site',
   },
 
