@@ -27,6 +27,9 @@ export default function Footer() {
       </div>
       <div className="container footer__legal">
         &copy; {COMPANY.founded} STT Legacy Carpentry and Construction (Pty) Ltd
+        <span className="footer__credit">
+          {' '}&middot; Website by <strong>PMP Solutions</strong>
+        </span>
       </div>
     </footer>
   )
