@@ -34,9 +34,9 @@ jobs:
         run: npm run build
       - name: Check dist contents
         run: |
-          echo "=== Contents of dist ==="
+          echo "=== dist ==="
           ls -la dist
-          echo "=== Contents of dist/images ==="
+          echo "=== dist/images ==="
           ls -la dist/images || echo "NO dist/images FOLDER"
       - name: Setup Pages
         uses: actions/configure-pages@v4
